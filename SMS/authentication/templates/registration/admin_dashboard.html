@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+
+</head>
+
+<body>
+
+    <h2>Admin page</h2>
+    
+    <a href="{% url 'Attendance:user_view' %}"> Profile </a><br><br>
+    <a href="{% url 'Attendance:user_update' user.id  %}"> Update Profile </a><br><br>
+    <a href="{% url 'Attendance:attendance' %}"> Attendance </a><br><br>
+    <a href="{% url 'payroll:teacher_payroll' %}">Teacher payroll</a><br><br>
+    <a href="{% url 'authentication:logout' %}"> Log Out </a><br><br>
+    <a href="{% url 'authentication:password_reset' %}"> Password Reset </a><br><br>
+    <a href="{% url 'authentication:password_reset_complete' %}">Reset Complete Password </a><br><br>
+    <a href="{% url 'authentication:password_change' %}"> Password Change</a><br><br>
+</body>
+
+</html>

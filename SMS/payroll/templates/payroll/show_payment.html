@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    {% if request.user.is_authenticated %}
+
+        {{payment}}
+        <h4> Amount : {payment.amount.first} </h4> 
+        <h4> Date :  {payment.paid_date}</h4>
+        <h4> Status : {payment.status}</h4>
+        <h4> User name : {payment.user.username}</h4>
+        
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Failure</title>
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="jumbotron text-center mt-5">
+            <h1 class="text-danger">Payment Failed</h1>
+            <p>We received your order. You can now close this window or use the
+                link below to visit
+                <a href="{% url 'Attendance:dashboard' %}">Dashboard</a>.
+            </p>
+        </div>
+    </div>
+    {% endblock content %}
+</body>
+
+</html>

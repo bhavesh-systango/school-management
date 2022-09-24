@@ -1,0 +1,13 @@
+/payment/migrations
+/payment/__pycache__
+
+/Attendance/migrations
+/Attendance/__pycache__
+
+/payroll/migrations
+/payroll/__pycache__
+
+/SMS/__pycache__
+/SMS/__init__.py
+
+db.sqlite3

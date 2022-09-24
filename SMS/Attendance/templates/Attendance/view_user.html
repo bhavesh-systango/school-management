@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+
+</head>
+
+<body>
+    
+{% block content %}
+
+    <h1>Users</h1>
+    
+    {% if user.is_authenticated %}
+
+        <p> Username : {{user.username}}</p>
+        <p> Email : {{user.email}}</p>
+        <p> My name is :{{user.first_name}}</p>
+        <p> Mobile : {{user.profile_set.first.mobile}}</p>
+        <p> Address : {{user.profile_set.first.address}}</p>
+
+    {% endif %}
+
+{% endblock %}
+
+</body>
+
+</html>

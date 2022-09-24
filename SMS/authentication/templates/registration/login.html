@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>this is Login page</h2>
+    <p>this is loginview</p>
+    
+    <form action="{% url 'authentication:login' %}" method = "post" >
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="login">Login</button>
+    </form>
+    <br><br>
+
+</body>
+
+</html>

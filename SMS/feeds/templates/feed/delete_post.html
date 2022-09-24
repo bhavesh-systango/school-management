@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Post</title>
+
+</head>
+
+<body>
+
+    <h2>Delete the post</h2>
+
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+
+                        <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Delete Post</h2>
+                        <p>Are you sure you want to delete 'Post'?</p>
+                        <form action="" method="post">
+                            {%csrf_token%}
+                            <a href="{% url 'feeds:delete_post' %}"><input type="button" value="Cancel"
+                                    class="btn btn-secondary"></a>
+
+                            <button class="btn btn-secondary">Submit</button><br></br>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

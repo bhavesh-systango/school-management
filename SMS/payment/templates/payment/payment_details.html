@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Payment Details</title>
+</head>
+<body>
+    <form action="{% url 'payment:paymentgateway' %}" method="post">
+
+        {% csrf_token %}
+
+        {% if request.user.is_authenticated %}
+
+            {{payment_details.amount}}
+            {{payment_details.type}}
+            {{payment_details.transaction_date}}
+        {% endif %}    
+        <button type="submit">Payment to school</button>
+
+    </form>
+</body>
+</html>
